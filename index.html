@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Redesign Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Responsive Redesign of Bilal Masjid Website</h1>
+        <p id="subtitle">Improving usability, accessibility, and mobile responsiveness</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#usability-problems">Problem Identification</a></li>
+            <li><a href="#redesign-process">Redesign Process</a></li>
+            <li><a href="#responsive-website">Responsive Website</a></li>
+            <li><a href="#reflection">Reflection</a></li>
+        </ul>
+    </nav>
+
+    <!-- Overview Section -->
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>For as long as I can remember, the <a href="https://www.bilalmasjid.com/AboutUs/Default.aspx"
+                target="_blank">Bilal Masjid website</a> has looked dated,
+            lacking modern usability features. The site's navigation is cluttered and its responsivity is nonexistent,
+            making it cumbersome for users on different devices.
+            Given these issues, I decided to focus on this webpage and aimed to give its
+            about section a modern, clean, and responsive design while ensuring better
+            accessibility for all users.
+        </p>
+    </section>
+
+    <!-- Problem Identification Section -->
+    <section id="problem-identification">
+        <h2>Problem Identification</h2>
+
+        <img class="centered-img" src="images/bilal-website.jpg" alt="picture of bilal website home page">
+
+
+        <p>For this project, I focused on redesigning the "About Us" webpage specifically due to its role as a key entry
+            point for
+            users unfamiliar with the mosque. The changes on this core webpage can serve as a model for improvements
+            across the website as a whole. Despite having limited content, the webpage divides the "About Us" section
+            into two subsections: About Us and History. Below are the main problems I identified about the webpage:</p>
+
+        <!-- Efficiency Concerns -->
+        <h3>Efficiency Concerns</h3>
+        <ul>
+            <li><strong>Cluttered and Inefficient Navigation:</strong> Users must sift through too many categories to
+                find key information, reducing efficiency.</li>
+            <li><strong>Nested Content Requires Extra Clicks:</strong> Some information is unnecessarily hidden behind
+                multiple links (e.g., "About Us" requires an additional click to access "History").</li>
+            <li><strong>Inconvenient Information Placement:</strong> Relevant details like prayer times are placed in
+                the sidebar instead of a central, easily conspicuous location.</li>
+            <li><strong>Missing Dropdown Menus:</strong> Users must click through additional pages instead of accessing
+                categories via hover-based dropdowns (e.g., "Volunteer Sign-up" in "Outreach").</li>
+            <li><strong>Site Isn't Responsive:</strong> The website appears zoomed out on mobile, forcing users to zoom
+                in manually and making buttons/text too small.</li>
+        </ul>
+
+        <!-- Learnability Concerns -->
+        <h3>Learnability Concerns</h3>
+        <ul>
+            <li><strong>Unclear Button Design:</strong> Buttons are not obviously clickable, causing confusion for
+                first-time users who rely on visual cues to understand interactivity (e.g., donation button lacks clear
+                styling).</li>
+            <li><strong>Lack of Visual Hierarchy:</strong> No significant distinction between headings and body text,
+                making it difficult to differentiate sections.</li>
+            <li><strong>Redundant and Ambiguous Menu Items:</strong> Vague sections (like "Information" in the left
+                sidebar) make navigation unclear, especially for new users.</li>
+            <li><strong>Missing Clear Call-to-Action:</strong> Important actions (e.g., donating, signing up for events)
+                are not clearly emphasized, confusing first-time users.</li>
+        </ul>
+
+        <!-- Memorability Concerns -->
+        <h3>Memorability Concerns</h3>
+        <ul>
+            <li><strong>Unorganized Content Structure:</strong> Confusing or ambiguous content placement makes it hard
+                for returning users to remember where information is located.</li>
+            <li><strong>Missing Visual Cues:</strong> Essential interactive components (e.g., dropdown menus, hover
+                highlights) are missing, making navigation harder to recall.</li>
+            <li><strong>Inconsistent Terminology:</strong> Terms are used interchangeably, making navigation confusing
+                (e.g., "Zakat" vs. "Donations").</li>
+            <li><strong>Lack of Recognizable Icons and Symbols:</strong> The website does not use common icons (e.g., a
+                magnifying glass for search), making it harder for users to recognize features.</li>
+        </ul>
+
+        <!-- Conceptual Model Concerns -->
+        <h3>Conceptual Model Concerns</h3>
+        <ul>
+            <li><strong>Unexpected Navigation Placement:</strong> Users expect a central navbar, but side navigation
+                elements create unnecessary redundancy.</li>
+            <li><strong>Deviation from Standard UI Patterns:</strong> Lack of dropdown menus, button highlights, and
+                intuitive text sizing makes navigation less predictable.</li>
+            <li><strong>Inconsistent Section Labels:</strong> Cluttered navigation bar with unconventional headers
+                (e.g., both "Outreach" and "Zakat" combined with non-related headers like "PDX Islamic Library").</li>
+            <li><strong>No Mobile-Friendly Adjustments:</strong> The website requires manual zooming on mobile, making
+                it difficult to interact with buttons and text.</li>
+        </ul>
+
+
+        <!-- Accessibility Concerns from WebAIM WAVE -->
+        <h3>Accessibility Concerns (WebAIM WAVE Report)</h3>
+        <ul>
+            <li><strong>9 General Errors:</strong> Missing alt text on images, poor HTML structure, and unlabeled form
+                elements.</li>
+            <li><strong>37 Low Contrast Errors:</strong> Text blends into the background, making reading difficult for
+                users with low vision or color blindness.</li>
+            <li><strong>10 Alerts:</strong> Missing page regions and improper heading usage make navigation harder for
+                assistive technologies.</li>
+            <li><strong>Missing ARIA Labels:</strong> Many components, such as search bars, buttons, and icons, lack
+                ARIA labels, making them inaccessible to screen reader users.</li>
+
+
+        </ul>
+        <p>I completely agree with the results from the WebAIM WAVE Report. The webpage in its current form has
+            significant accessibility issues, particularly in terms of contrast, labeling, and structural clarity. Low
+            contrast poses a major challenge for visually impaired users. Missing labels like alt text prevent screen
+            readers from describing images. Lastly, poor hierarchy, missing page landmarks, and small, unreadable text
+            further worsen accessibility for those using assistive technologies. Addressing contrast, labeling,
+            structure, and text size would significantly improve this webpage’s accessibility.</p>
+    </section>
+    <!-- Redesign Process Section -->
+    <section id="redesign-process">
+        <h2>Redesign Process</h2>
+        <p>The redesign aimed to create a clean, accessible, and mobile-friendly webpage by merging the History and
+            About Us subsections into a single unified About Us page. To visualize the redesign and ensure consistency,
+            I created detailed mockups and a comprehensive design style
+            guide in Figma. The guide included typography standards, button styles, color palettes, and responsive
+            layouts. Mockups were designed for mobile, tablet, and desktop views to validate the responsive design
+            before implementation.
+        </p>
+
+
+
+        <!-- Design Style Guide -->
+        <h3 class="centered-subtitle">Design Style Guide</h3>
+        <div class="style-guide">
+            <img src="images/style-guide.png" alt="Design Style Guide - Typography, Buttons, Colors, Layout">
+        </div>
+
+        <!-- Mockup Images -->
+
+        <h3 class="centered-subtitle">Desktop Mockup</h3>
+        <div class="scrollable-image desktop">
+            <img src="images/desktop-mockup.png" alt="Desktop Mockup - Redesigned Website">
+        </div>
+
+
+        <h3 class="centered-subtitle">Tablet Mockup</h3>
+        <div class="scrollable-image tablet">
+            <img src="images/tablet-mockup.png" alt="Tablet Mockup - Redesigned Website">
+        </div>
+
+        <h3 class="centered-subtitle">Mobile Mockup</h3>
+        <div class="scrollable-image phone">
+            <img src="images/phone-mockup.png" alt="Phone Mockup - Redesigned Website">
+        </div>
+
+
+
+        <!-- Usability Improvements -->
+        <h3>How the Redesign Addresses Usability Issues</h3>
+        <ul>
+            <li><strong>Streamlined Navigation:</strong> Implemented intuitive mobile navigation by grouping related
+                items in a
+                hamburger menu for mobile. Simplified content architecture by merging related sections (e.g., "About Us"
+                and "History"). Eliminated redundant sidebar elements to
+                reduce visual clutter.</li>
+
+            <li><strong>Responsive and Mobile-Friendly Design:</strong> Adopted a mobile-first approach that ensures
+                optimal viewing across all devices. Increased tap target sizes and improved typography for mobile
+                readability. Pages now fluidly adapt to different screen dimensions through responsive collapsing and
+                realignment.</li>
+
+            <li><strong>Improved Visual and Button Design:</strong> Designed consistent, interactive buttons with hover
+                states. Established clear visual hierarchy through thoughtful typography (size, weight, spacing) and
+                strategic use of bright, contrasting colors for primary action buttons ("Donate", "Volunteer").</li>
+
+            <li><strong>Consistent Language and Icon Usage:</strong> Unified terminology across the interface to prevent
+                confusion. Implemented universally recognizable icons (e.g., search magnifier) accompanied by
+                descriptive labels.</li>
+
+            <li><strong>Modern and Predictable UI Patterns:</strong> Incorporated contemporary conventions like
+                intuitive dropdown menus. Removed ambiguous or duplicate labels (e.g, zakat vs donations)
+            </li>
+        </ul>
+
+        <h3>How the Redesign Addresses Accessibility Issues</h3>
+        <ul>
+            <li><strong>Alt Text:</strong> Added comprehensive alternative text for all
+                meaningful images.</li>
+
+            <li><strong>High Contrast and Readability:</strong> Deployed WCAG compliant color combinations (dark
+                greens against white) to maximize text legibility and visual comfort.</li>
+
+            <li><strong>ARIA Labeling and Accessibility Enhancements:</strong> Enhanced interactive components (buttons,
+                form fields) with appropriate ARIA attributes for better screen reader interpretation.</li>
+        </ul>
+    </section>
+
+    <!-- Responsive Redesign Section -->
+    <section id="responsive-website">
+        <h2>Responsive Website</h2>
+        <p>The redesigned website has been tested for responsiveness and accessibility across various devices and screen
+            sizes.
+            You can visit the live version of the redesigned website by clicking <a
+                href="https://musatahir.github.io/responsive-redesign-/" target="_blank" class="website-link">here.</a>
+        </p>
+
+        <p>
+            To demonstrate responsive behavior, I recorded screen captures of the site on three different screen sizes:
+            desktop, tablet, and mobile. These recordings show how layout and functionality adapt smoothly across
+            devices. Additionally, I conducted a WebAIM WAVE accessibility report to ensure the site meets WCAG.
+        </p>
+
+        <h3 class="centered-subtitle">Desktop View (Macbook Pro)</h3>
+        <div class="video-container">
+            <div class="desktop-container">
+                <video src="videos/desktop-vid.mov" controls></video>
+            </div>
+        </div>
+
+        <h3 class="centered-subtitle">Tablet View (iPad Air)</h3>
+        <div class="video-container">
+            <div class="tablet-vid-container">
+                <video src="videos/tablet-vid.mov" controls></video>
+            </div>
+        </div>
+
+        <h3 class="centered-subtitle">Phone View (iPhone Pro 14)</h3>
+        <div class="video-container">
+            <div class="phone-vid-container">
+                <video src="videos/phone-vid.mov" controls></video>
+            </div>
+        </div>
+
+
+
+        <h3 class="centered-subtitle">WAVE Accessibility Report</h3>
+        <img class="wave-img" src="images/wave.png" alt="WebAIM WAVE accessibility report screenshot">
+
+    </section>
+
+
+
+    <!-- Reflection Section -->
+    <section id="reflection">
+        <h2>Reflection</h2>
+        <p>This project improved my understanding of responsive design principles and the importance of accessibility in
+            designing web pages. From a technical standpoint, CSS Flexbox and Grid, along with media queries and tools
+            like clamp(), proved tremendously useful. </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Bilal Masjid Responsive Redesign Project</p>
+    </footer>
+</body>
+
+</html>
